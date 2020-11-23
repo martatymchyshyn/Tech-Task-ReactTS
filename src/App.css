@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+/* Style the header links */
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+/* Change the background color on mouse-over */
+/* Style the active/current link*/
+/* Float the link section to the right */
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+App {
+  background: #30ebd8;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #603bbb;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
+.login {
+  width: 100%;
   min-height: 100vh;
+  padding: 0 20px;
+  background: linear-gradient(0deg, rgba(164,171,174,1) 0%, rgba(179,189,187,1) 8%, rgba(255,255,255,1) 97%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .loginContainer {
+    padding: 60px;
+    margin: auto;
+    width: 100%;
+    max-width: 420px;
+    min-height: 500px;
+    display: flex;
+    border-radius: 13em/3em;
+    flex-direction: column;
+    justify-content: center;
+    background: #576160;
+    box-shadow: 0 50px 70px -20px #535b5a;
+    label {
+      color: white;
+      margin: 14px 0;
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+    }
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 19px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .btnContainer {
+      width: 100%;
+      padding: 24px 0;
+      button {
+        color: #424847;
+        background: #cfdbdb;
+        border-radius: 8px;
+        &:hover {
+          background: #c9d5d5;
+        }
+      }
+      p {
+        margin: 14px 0 0 0;
+        text-align: right;
+        color: #fff;
+        span {
+          color: #a4abae;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          margin-left: 5px;
+          cursor: pointer;
+          transition: all 400ms ease-in-out;
+          &:hover {
+            color: #c9d5d5;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .errorMsg {
+      color: white;
+      font-size: 16px;
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+.header {
+  overflow: hidden;
+  background-color: #424847;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    &:hover {
+      background-color: #bcbdbe;
+      color: black;
+    }
+  }
+  a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  button.active {
+    width: 100px;
+    background-color: white;
+    color: black;
+    margin-right: 1%;
+    margin-bottom: 1%;
+  }
+}
+.header-right {
+  float: right;
+}
+.list {
+  padding-left: 5px;
+  font-family: sans-serif;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  width: 70%;
+  margin: 5px 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  text-decoration: none;
+  ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    list-style-type: none;
+    padding: 20px 15px;
+    list-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    li {
+      list-style-type: disc;
+      font-size: 18px;
+      color: #424847;
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 10px;
+      a {
+        text-decoration: none;
+        color: #424847;
+        font-family: "Arial Black";
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.title {
+  h1 {
+    padding-left: 10px;
+    font-family: "Arial Black";
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  .header-right {
+    float: none;
   }
 }
